@@ -1,17 +1,14 @@
 import React from 'react'
 import styled from 'styled-components'
-// import { FaArrowAltCircleDown } from "react-icons/fa";
-import { TiArrowSortedDown } from "react-icons/ti";
 import Fade from 'react-reveal/Fade';
 
-
-function Section({title, description, backgroundImage, leftButton, rightButton }) {
+function Section({title, description, backgroundImage, leftButton, rightButton, details }) {
   return (
     <Wrap bgImage={backgroundImage}>
         <Fade bottom duration={1000} delay={1000} >
-        <ItemText>
-            <h1>{title}</h1>
-            <p>{description}</p>
+        <ItemText >
+            <h1 style={{color: "black"}}>{title}</h1>
+            <p style={{color: "black"}}>{description}</p>
         </ItemText>
         </Fade>
 
@@ -25,7 +22,7 @@ function Section({title, description, backgroundImage, leftButton, rightButton }
                 </Fade>
             </ButtonGroup>
             <DownArrow >
-                <TiArrowSortedDown size="40px" color="yellow" />
+                {details}
             </DownArrow >
         </Buttons>
     </Wrap>
@@ -47,14 +44,13 @@ const Wrap = styled.div`
 const ItemText = styled.div`
     margin-top: 40px;
 `
-
 const ButtonGroup = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     margin-buttom: 30px;
 
-    @media (max-width: 460px){
+    @media (max-width: 670px){
         flex-direction: column;
     }
     `
@@ -78,11 +74,9 @@ const RigtButton = styled(LeftButton)`
     color: black;
     opacity: 0.65;
 `
-
 const DownArrow = styled.div`
     margin-bottom: 10px;
     height: 40px;
     animation: animateDown infinite 1.5s;
-  
 `
 const Buttons = styled.div``

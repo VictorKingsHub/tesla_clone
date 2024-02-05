@@ -7,17 +7,18 @@ function Home() {
     <Container>
         <Section 
             title="Model S"
-            description="Order Online for Touchless Delivery"
+            description="Lease starting at $379/mo*"
             backgroundImage="models.jpg"
             leftButton="Custom Order"
-            rightButton="Existing inventory"
+            rightButton="Demo drive"
+            details="*Excludes taxes and fees with price subject to change. Available in select states. See Details"
         />
         <Section 
             title="Model X"
             description="Order Online for Touchless Delivery"
             backgroundImage="Model-X.png"
             leftButton="Custom Order"
-            rightButton="Existing inventory"
+            rightButton="Demo Drive"
         />
         <Section 
             title="Model 3"
