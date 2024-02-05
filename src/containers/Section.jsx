@@ -2,21 +2,27 @@ import React from 'react'
 import styled from 'styled-components'
 // import { FaArrowAltCircleDown } from "react-icons/fa";
 import { TiArrowSortedDown } from "react-icons/ti";
+import Fade from 'react-reveal/Fade';
+
 
 function Section({title, description, backgroundImage, leftButton, rightButton }) {
   return (
     <Wrap bgImage={backgroundImage}>
-      <ItemText>
-        <h1>{title}</h1>
-        <p>{description}</p>
-      </ItemText>
+        <Fade bottom duration={1000} delay={1000} >
+        <ItemText>
+            <h1>{title}</h1>
+            <p>{description}</p>
+        </ItemText>
+        </Fade>
 
         <Buttons>
             <ButtonGroup>
-                {leftButton && <LeftButton> {leftButton} </LeftButton>}
-                
-                {rightButton && <RigtButton> {rightButton} </RigtButton> }
-                
+                <Fade bottom duration={1000} delay={2500}>
+                    {leftButton && <LeftButton> {leftButton} </LeftButton>}
+                </Fade>
+                <Fade bottom duration={1000} delay={2500}>
+                    {rightButton && <RigtButton> {rightButton} </RigtButton> }
+                </Fade>
             </ButtonGroup>
             <DownArrow >
                 <TiArrowSortedDown size="40px" color="yellow" />
